@@ -182,3 +182,61 @@ Resources related to a meeting in the API.
                 "startTime":"2017/12/11",
                 "endTime":"2017/12/13"
             }
+            
+### Get Meeting by Title [GET /v1/meetings/{title}]
+
++ Parameters
+    - title : `go` (string, required) - Title
+
++ Response 200 (application/json)
+
+        {
+            "title":"go",
+            "participator":
+                {   
+                    "participator1":"chenwb",
+                    "participator2":"caijh"
+                },
+            "startTime":"2017/12/11",
+            "endTime":"2017/12/13"
+        }
+        
+### Delete Meeting by Title [DELETE /v1/meetings/{title}]
+
++ Parameters
+    - title : `go` (string, required) - Title
+
++ Response 200 (application/json)
+
+        {
+            
+        }
+        
+### Update Meeting by Title [PUT /v1/meetings/{title}]
++ Parameters
+    - title : `go` (string, required) - Title
+
++ Request (application/json)
+
+        {
+            "participator":
+                {   
+                    "participator1":"chenwb",
+                    "participator2":"caijh"
+                },
+            "startTime":"2017/12/11",
+            "endTime":"2017/12/13"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "title":"go",
+            "participator":
+                {   
+                    "participator1":"chenwb",
+                    "participator2":"caijh"
+                },
+            "startTime":"2017/12/11",
+            "endTime":"2017/12/13"
+        }
